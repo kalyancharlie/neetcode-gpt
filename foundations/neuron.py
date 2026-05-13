@@ -8,7 +8,7 @@ class Solution:
         return 1 / (1 + math.exp(-x))
     
     def relu(self, x: NDArray[np.float64]) -> float:
-        return float(max(0, x))
+        return max(0.0, x)
 
     def forward(self, x: NDArray[np.float64], w: NDArray[np.float64], b: float, activation: str) -> float:
         # x: 1D input array

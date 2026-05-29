@@ -21,7 +21,7 @@ class Solution(nn.Module):
         x = self.embedding(x)
         # Shape is now (B, T, 16)
         
-        # FIX: Average across the sequence dimension (T is index 1)
+        # Average across the sequence dimension (T is index 1)
         x = torch.mean(x, dim=1)
         # Shape is now (B, 16)
         
